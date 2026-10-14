@@ -6,43 +6,83 @@
 <title>Ayanda Patrick Herlihy</title>
 <meta name="description" content="Ayanda Patrick Herlihy: research on LLM agents, reinforcement learning and multi-agent systems.">
 <style>
-  :root { --bg: #faf9f6; --fg: #1c1c1c; --muted: #6b6b6b; --accent: #2f5d8a; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #151515; --fg: #ececec; --muted: #9a9a9a; --accent: #8fb6dc; }
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0; min-height: 100vh; display: grid; place-items: center;
-    background: var(--bg); color: var(--fg);
-    font: 17px/1.6 Georgia, "Times New Roman", serif; padding: 24px 16px;
-  }
-  main { max-width: 560px; }
-  h1 { font-size: 2rem; font-weight: normal; margin: 0 0 .25rem; }
-  .role { color: var(--muted); margin: 0 0 1.5rem; }
-  .note { border-left: 3px solid var(--accent); padding-left: 1rem; color: var(--muted); }
-  a { color: var(--accent); }
-  .links { display: flex; gap: 1rem; font-size: 1.6rem; }
-  .links a { text-decoration: none; }
-  .links svg { width: 1.6rem; height: 1.6rem; fill: currentColor; vertical-align: middle; }
+:root { --bg:#faf9f6; --fg:#1c1c1c; --muted:#595959; --accent:#2f5d8a; --line:#d8d8d4; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; scroll-padding-top:24px; }
+body { margin:0; background:var(--bg); color:var(--fg); font:17px/1.65 Georgia,"Times New Roman",serif; }
+main { max-width:880px; margin:0 auto; padding:28px 28px 72px; }
+nav { display:flex; flex-wrap:wrap; gap:8px 26px; border-bottom:1px solid var(--line); padding-bottom:16px; margin-bottom:46px; font:15px/1.5 Arial,sans-serif; }
+nav a { text-decoration:none; padding:6px 0; }
+nav a:hover { text-decoration:underline; }
+a { color:var(--accent); text-underline-offset:3px; }
+a:focus-visible { outline:2px solid var(--accent); outline-offset:5px; }
+h1 { font-size:2.2rem; font-weight:normal; line-height:1.2; margin:0 0 14px; }
+h2 { font-size:1.6rem; font-weight:normal; margin:0 0 24px; }
+h3 { font-size:1.15rem; line-height:1.45; margin:0 0 8px; }
+p { margin:0 0 18px; }
+.role { color:var(--muted); }
+section { margin-top:52px; }
+#about { margin-top:0; max-width:700px; }
+.links { display:flex; gap:22px; margin:24px 0 0; }
+.links a { text-decoration:none; }
+.links svg { width:25px; height:25px; fill:currentColor; vertical-align:middle; }
+.publication { border-top:1px solid var(--line); padding:24px 0; }
+.authors,.venue { font-size:15px; margin-bottom:9px; }
+.venue { color:var(--muted); }
+.resources { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 0; font:14px/1.4 Arial,sans-serif; }
+.resources a { border:1px solid var(--line); padding:5px 12px; text-decoration:none; border-radius:3px; }
+.resources a:hover { border-color:var(--accent); }
+.status { font:12px/1.4 Arial,sans-serif; color:var(--accent); display:block; margin-bottom:10px; }
+.empty { color:var(--muted); font-size:15px; }
+footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:14px; }
+@media(max-width:600px) { main { padding:20px 20px 48px; } nav { gap:8px 20px; margin-bottom:32px; } h1 { font-size:1.85rem; } section { margin-top:38px; } }
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
 <body>
 <main>
-  <h1>Ayanda Patrick Herlihy</h1>
+  <nav aria-label="Main navigation">
+    <a href="#about">About</a>
+    <a href="#publications">Publications</a>
+    <a href="#under-review">Under review</a>
+    <a href="#cv">CV</a>
+  </nav>
+  <section id="about" aria-labelledby="name">
+  <h1 id="name">Ayanda Patrick Herlihy</h1>
   <p class="role">Computer science graduate. I'm preparing to apply for PhDs in LLM agents, reinforcement learning and multi-agent systems.</p>
   <p>I'm interested in how AI systems learn and work together, and in how autonomous systems could change who gets access to opportunity. Before AI, I worked in music production.</p>
   <ul>
     <li>BSc Computer Science with AI, Birmingham City University, 2026 (First Class)</li>
     <li>MITACS Globalink Research Intern, University of British Columbia, 2025</li>
     <li>Current work: agents for off-policy evaluation</li>
-    <li><a href="https://arxiv.org/abs/2511.00802"><em>GrowthHacker: Automated Off-Policy Evaluation Optimization Using Code-Modifying LLM Agents</em></a>, ACM TOSEM 2026, co-first author</li>
   </ul>
-  <p class="note">This site is still being built. Projects and a CV will be added soon.</p>
   <p class="links">
     <a href="https://github.com/Ayanda-Patrick-Herlihy" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
     <a href="https://scholar.google.com/citations?user=akkzhiUAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
     <a href="https://orcid.org/0009-0007-9565-0020" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
   </p>
+  </section>
+  <section id="publications" aria-labelledby="publications-heading">
+    <h2 id="publications-heading">Publications</h2>
+    <article class="publication">
+      <span class="status">Published · 2026</span>
+      <h3><a href="https://arxiv.org/abs/2511.00802">GrowthHacker: Automated Off-Policy Evaluation Optimization Using Code-Modifying LLM Agents</a></h3>
+      <p class="authors">Jie JW Wu*, <strong>Ayanda Patrick Herlihy*</strong>, Ahmad Saleem Mirza, Ali Afoud, Fatemeh Fard</p>
+      <p class="venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2026. *Equal contribution.</p>
+      <p>Code-modifying LLM agents search for better off-policy evaluation estimators through repeated experiments.</p>
+      <p class="resources"><a href="https://arxiv.org/abs/2511.00802">Paper</a><a href="https://arxiv.org/pdf/2511.00802">PDF</a><a href="https://github.com/jie-jw-wu/ope-agent">Code</a></p>
+    </article>
+  </section>
+  <section id="under-review" aria-labelledby="review-heading">
+    <h2 id="review-heading">Under review</h2>
+    <!-- Add entries here only after their submission status is confirmed. -->
+    <p class="empty">No papers listed here yet.</p>
+  </section>
+  <section id="cv" aria-labelledby="cv-heading">
+    <h2 id="cv-heading">CV</h2>
+    <p class="empty">An updated CV will be available here soon.</p>
+  </section>
+  <footer>This site is still being built.</footer>
 </main>
 </body>
 </html>
