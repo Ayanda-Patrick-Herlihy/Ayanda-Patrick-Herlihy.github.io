@@ -22,7 +22,11 @@ h3 { font-size:1.15rem; line-height:1.45; margin:0 0 8px; }
 p { margin:0 0 18px; }
 .role { color:var(--muted); }
 section { margin-top:52px; }
-#about { margin-top:0; max-width:700px; }
+#about { margin-top:0; }
+.portrait { width:117px; height:117px; margin:0 auto 24px; border-radius:50%; background:#e5e5e1; display:grid; place-items:center; color:var(--muted); font:26px/1 Arial,sans-serif; }
+.profile-heading { text-align:center; }
+.contact-links { display:flex; justify-content:center; gap:22px; margin:18px 0 28px; font:15px/1.5 Arial,sans-serif; }
+.bio { max-width:700px; }
 .links { display:flex; gap:22px; margin:24px 0 0; }
 .links a { text-decoration:none; }
 .links svg { width:25px; height:25px; fill:currentColor; vertical-align:middle; }
@@ -44,12 +48,15 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
   <nav aria-label="Main navigation">
     <a href="#about">About</a>
     <a href="#publications">Publications</a>
-    <a href="#under-review">Under review</a>
-    <a href="#cv">CV</a>
   </nav>
   <section id="about" aria-labelledby="name">
+  <div class="profile-heading">
+  <div class="portrait" role="img" aria-label="Portrait placeholder for Ayanda Patrick Herlihy">APH</div>
   <h1 id="name">Ayanda Patrick Herlihy</h1>
   <p class="role">Computer science graduate. I'm preparing to apply for PhDs in LLM agents, reinforcement learning and multi-agent systems.</p>
+  <div class="contact-links"><a href="cv.html">CV</a><a href="mailto:apherlihy@gmail.com">Email</a></div>
+  </div>
+  <div class="bio">
   <p>I'm interested in how AI systems learn and work together, and in how autonomous systems could change who gets access to opportunity. Before AI, I worked in music production.</p>
   <ul>
     <li>BSc Computer Science with AI, Birmingham City University, 2026 (First Class)</li>
@@ -61,6 +68,7 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
     <a href="https://scholar.google.com/citations?user=akkzhiUAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
     <a href="https://orcid.org/0009-0007-9565-0020" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
   </p>
+  </div>
   </section>
   <section id="publications" aria-labelledby="publications-heading">
     <h2 id="publications-heading">Publications</h2>
@@ -72,15 +80,9 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
       <p>Code-modifying LLM agents search for better off-policy evaluation estimators through repeated experiments.</p>
       <p class="resources"><a href="https://arxiv.org/abs/2511.00802">Paper</a><a href="https://arxiv.org/pdf/2511.00802">PDF</a><a href="https://github.com/jie-jw-wu/ope-agent">Code</a></p>
     </article>
-  </section>
-  <section id="under-review" aria-labelledby="review-heading">
-    <h2 id="review-heading">Under review</h2>
+    <h3 id="review-heading">Under review</h3>
     <!-- Add entries here only after their submission status is confirmed. -->
     <p class="empty">No papers listed here yet.</p>
-  </section>
-  <section id="cv" aria-labelledby="cv-heading">
-    <h2 id="cv-heading">CV</h2>
-    <p class="empty">An updated CV will be available here soon.</p>
   </section>
   <footer>This site is still being built.</footer>
 </main>
