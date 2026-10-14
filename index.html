@@ -25,10 +25,10 @@ section { margin-top:52px; }
 #about { margin-top:0; }
 .portrait { width:117px; height:117px; margin:0 auto 24px; border-radius:50%; background:#e5e5e1; display:grid; place-items:center; color:var(--muted); font:26px/1 Arial,sans-serif; }
 .profile-heading { text-align:center; }
-.contact-links { display:flex; justify-content:center; gap:22px; margin:18px 0 28px; font:15px/1.5 Arial,sans-serif; }
 .bio { max-width:700px; }
-.links { display:flex; gap:22px; margin:24px 0 0; }
-.links a { text-decoration:none; }
+.links { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:18px 0 28px; }
+.links a { display:grid; place-items:center; width:44px; height:44px; text-decoration:none; border-radius:4px; }
+.links a:hover { background:#e8edf1; }
 .links svg { width:25px; height:25px; fill:currentColor; vertical-align:middle; }
 .publication { border-top:1px solid var(--line); padding:24px 0; }
 .authors,.venue { font-size:15px; margin-bottom:9px; }
@@ -54,7 +54,13 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
   <div class="portrait" role="img" aria-label="Portrait placeholder for Ayanda Patrick Herlihy">APH</div>
   <h1 id="name">Ayanda Patrick Herlihy</h1>
   <p class="role">Computer science graduate. I'm preparing to apply for PhDs in LLM agents, reinforcement learning and multi-agent systems.</p>
-  <div class="contact-links"><a href="cv.html">CV</a><a href="mailto:apherlihy@gmail.com">Email</a></div>
+  <p class="links">
+    <a href="https://github.com/Ayanda-Patrick-Herlihy" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
+    <a href="https://scholar.google.com/citations?user=akkzhiUAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
+    <a href="https://orcid.org/0009-0007-9565-0020" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
+    <a href="cv.html" aria-label="CV" title="CV"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 0h5.5L14 4.5V14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2zm5 1.5V5h3.5L9 1.5zM5 8v1h6V8H5zm0 3v1h6v-1H5z"/></svg></a>
+    <a href="mailto:apherlihy@gmail.com" aria-label="Email" title="Email"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2zm0 1h12a1 1 0 0 1 .85.47L8 7.6 1.15 3.47A1 1 0 0 1 2 3zm-1 1.55 6.74 4.06a.5.5 0 0 0 .52 0L15 4.55V12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4.55z"/></svg></a>
+  </p>
   </div>
   <div class="bio">
   <p>I'm interested in how AI systems learn and work together, and in how autonomous systems could change who gets access to opportunity. Before AI, I worked in music production.</p>
@@ -63,11 +69,7 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
     <li>MITACS Globalink Research Intern, University of British Columbia, 2025</li>
     <li>Current work: agents for off-policy evaluation</li>
   </ul>
-  <p class="links">
-    <a href="https://github.com/Ayanda-Patrick-Herlihy" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg></a>
-    <a href="https://scholar.google.com/citations?user=akkzhiUAAAAJ" aria-label="Google Scholar" title="Google Scholar"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 1 0 0 14 7 7 0 0 0 0-14z"/></svg></a>
-    <a href="https://orcid.org/0009-0007-9565-0020" aria-label="ORCID" title="ORCID"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zM7.369 4.378c.525 0 .947.431.947.947s-.422.947-.947.947a.95.95 0 0 1-.947-.947c0-.525.422-.947.947-.947zm-.722 3.038h1.444v10.041H6.647V7.416zm3.562 0h3.9c3.712 0 5.344 2.653 5.344 5.025 0 2.578-2.016 5.025-5.325 5.025h-3.919V7.416zm1.444 1.303v7.444h2.297c3.272 0 4.022-2.484 4.022-3.722 0-2.016-1.284-3.722-4.097-3.722h-2.222z"/></svg></a>
-  </p>
+
   </div>
   </section>
   <section id="publications" aria-labelledby="publications-heading">
