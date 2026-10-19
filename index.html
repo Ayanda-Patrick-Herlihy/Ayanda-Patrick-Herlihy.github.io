@@ -23,7 +23,7 @@ p { margin:0 0 18px; }
 .role { color:var(--muted); }
 section { margin-top:52px; }
 #about { margin-top:0; }
-.portrait { width:117px; height:117px; margin:0 auto 24px; border-radius:50%; background:#e5e5e1; display:grid; place-items:center; color:var(--muted); font:26px/1 Arial,sans-serif; }
+.portrait { width:117px; height:117px; margin:0 auto 24px; border-radius:50%; background:#e5e5e1; display:block; object-fit:cover; }
 .profile-heading { text-align:center; }
 .bio { max-width:700px; }
 .links { display:flex; flex-wrap:wrap; justify-content:center; gap:8px; margin:18px 0 28px; }
@@ -51,7 +51,7 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
   </nav>
   <section id="about" aria-labelledby="name">
   <div class="profile-heading">
-  <div class="portrait" role="img" aria-label="Portrait placeholder for Ayanda Patrick Herlihy">APH</div>
+  <img class="portrait" src="assets/profile.jpg" width="117" height="117" alt="Ayanda Patrick Herlihy">
   <h1 id="name">Ayanda Patrick Herlihy</h1>
   <p class="role">Computer science graduate. I'm preparing to apply for PhDs in LLM agents, reinforcement learning and multi-agent systems.</p>
   <p class="links">
