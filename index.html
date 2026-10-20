@@ -30,7 +30,8 @@ section { margin-top:52px; }
 .links a { display:grid; place-items:center; width:44px; height:44px; text-decoration:none; border-radius:4px; }
 .links a:hover { background:#e8edf1; }
 .links svg { width:25px; height:25px; fill:currentColor; vertical-align:middle; }
-.publication { border-top:1px solid var(--line); padding:24px 0; }
+.publication { border-top:1px solid var(--line); padding:24px 0; display:grid; grid-template-columns:240px 1fr; gap:24px; align-items:start; }
+.pub-thumb img { width:100%; height:auto; display:block; border:1px solid var(--line); border-radius:3px; background:#fff; }
 .authors,.venue { font-size:15px; margin-bottom:9px; }
 .venue { color:var(--muted); }
 .resources { display:flex; flex-wrap:wrap; gap:10px; margin:16px 0 0; font:14px/1.4 Arial,sans-serif; }
@@ -39,7 +40,7 @@ section { margin-top:52px; }
 .status { font:12px/1.4 Arial,sans-serif; color:var(--accent); display:block; margin-bottom:10px; }
 .empty { color:var(--muted); font-size:15px; }
 footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; color:var(--muted); font-size:14px; }
-@media(max-width:600px) { main { padding:20px 20px 48px; } nav { gap:8px 20px; margin-bottom:32px; } h1 { font-size:1.85rem; } section { margin-top:38px; } }
+@media(max-width:600px) { .publication { grid-template-columns:1fr; } main { padding:20px 20px 48px; } nav { gap:8px 20px; margin-bottom:32px; } h1 { font-size:1.85rem; } section { margin-top:38px; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 </style>
 </head>
@@ -75,12 +76,15 @@ footer { margin-top:56px; border-top:1px solid var(--line); padding-top:18px; co
   <section id="publications" aria-labelledby="publications-heading">
     <h2 id="publications-heading">Publications</h2>
     <article class="publication">
+      <a class="pub-thumb" href="assets/growthhacker-fig3.png"><img src="assets/growthhacker-fig3.png" width="1440" height="805" alt="Figure 3 from the GrowthHacker paper: the two-agent framework architecture"></a>
+      <div>
       <span class="status">Published · 2026</span>
       <h3><a href="https://arxiv.org/abs/2511.00802">GrowthHacker: Automated Off-Policy Evaluation Optimization Using Code-Modifying LLM Agents</a></h3>
       <p class="authors">Jie JW Wu*, <strong>Ayanda Patrick Herlihy*</strong>, Ahmad Saleem Mirza, Ali Afoud, Fatemeh Fard</p>
       <p class="venue">ACM Transactions on Software Engineering and Methodology (TOSEM), 2026. *Equal contribution.</p>
       <p>Code-modifying LLM agents search for better off-policy evaluation estimators through repeated experiments.</p>
       <p class="resources"><a href="https://arxiv.org/abs/2511.00802">Paper</a><a href="https://arxiv.org/pdf/2511.00802">PDF</a><a href="https://github.com/jie-jw-wu/ope-agent">Code</a></p>
+      </div>
     </article>
     <h3 id="review-heading">Under review</h3>
     <!-- Add entries here only after their submission status is confirmed. -->
